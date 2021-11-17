@@ -1,5 +1,6 @@
 #   a123_apple_1.py
 import turtle as trtl
+import random as rand
 
 #-----setup-----
 apple_image = "apple.gif" # Store the file name of your shape
@@ -28,6 +29,8 @@ def drop_apple():
   apple.penup()
   apple.goto(0,-200)
   apple.pendown()
+  apple.clear()
+  apple.hideturtle()
 
 def drop_pear(active_pear):
   pear.penup()
@@ -36,8 +39,8 @@ def drop_pear(active_pear):
 
 # This function takes care of font and color.
 def draw_an_A():
-  apple.color("Brown")
-  apple.write("A", font=("Arial", 60, "bold")) 
+  apple.color("White")
+  apple.write('A', font=("Arial", 65, "bold")) 
 
 def reset():
   apple.clear()
@@ -50,8 +53,6 @@ draw_apple(apple)
 
 wn.onkeypress(drop_apple, "a")
 
-wn.onkeypress(reset, "r")
- 
 
 """draw_pear(pear)
 
